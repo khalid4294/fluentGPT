@@ -1,6 +1,5 @@
+requests
 boto3
 python-telegram-bot==13.3
 flask
 pydub
-requests
-psycopg2
