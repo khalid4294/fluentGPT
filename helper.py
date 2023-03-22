@@ -1,7 +1,8 @@
 import os 
-import json    
-import requests
+import json
 import boto3
+import requests
+
 
 def update_user_db(user_id, messages, role):
     
