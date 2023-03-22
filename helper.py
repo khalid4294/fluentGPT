@@ -2,7 +2,6 @@ import os
 import json    
 import requests
 import boto3
-import psycopg2
 
 def update_user_db(user_id, messages, role):
     
