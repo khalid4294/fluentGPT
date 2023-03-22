@@ -10,6 +10,7 @@ logger = logging.getLogger(__name__)
 def main():
     TOKEN = os.environ.get('TOKEN') # you can get the token from BotFather
     PORT = int(os.environ.get('PORT', '8443'))
+    APP_NAME = os.environ.get('APP_NAME') 
 
     updater = Updater(token=TOKEN, use_context=True)
     dispatcher = updater.dispatcher
@@ -18,7 +19,7 @@ def main():
     print("Bot is running...")
     
     updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
-    updater.bot.setWebhook(url=f"https://learn-gpt.herokuapp.com/{TOKEN}")
+    updater.bot.setWebhook(url=f"https://{APP_NAME}.herokuapp.com/{TOKEN}")
     updater.idle() 
 
 if __name__ == '__main__':
